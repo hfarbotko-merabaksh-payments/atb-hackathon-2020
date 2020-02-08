@@ -18,3 +18,10 @@ spring:
   jackson:
     serialization:
       fail-on-empty-beans: false
+  main:
+    allow-bean-definition-overriding: true
+
+obp:
+  api:
+    rootUrl: https://api.leapos.ca/obp/v4.0.0
+    directLoginPath: https://api.leapos.ca/obp/v4.0.0/my/logins/direct
