@@ -6,17 +6,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/yourspending")
+@RequestMapping("/spendingpatterns")
 public class SpendingController {
 
     @GetMapping({"/", ""})
-    public String yourSpending(Model model) {
-
-
+    public String spendingPatterns(Model model) {
         model.addAttribute("greenValue", 45);
-//        model.addAttribute("orangeValue", 33);
-//        model.addAttribute("redValue", 34);
+        return "spendingPatterns";
+    }
 
-        return "yourspending";
+
+    @GetMapping({"/habits/", "/habits"})
+    public String habits() {
+        return "spendingpatterns/habits";
     }
 }

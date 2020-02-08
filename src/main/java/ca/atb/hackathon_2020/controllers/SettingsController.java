@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class SettingsController {
 
     @GetMapping({"/", ""})
-    public String yourSpending() {
+    public String settings() {
         return "settings";
     }
 }

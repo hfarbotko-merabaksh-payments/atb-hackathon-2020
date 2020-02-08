@@ -4,7 +4,7 @@
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" th:fragment="header(currentPage)">
     <div class="container">
-    <a class="navbar-brand" href="#"><img src="images/bitwarden-new.png" th:width="30" /></a>
+    <a class="navbar-brand" href="#"><img th:src="@{/images/bitwarden-new.png}" th:width="30" /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -14,8 +14,8 @@
             <li class="nav-item" th:classappend="${currentPage == 'Home'} ? 'active' : '' ">
                 <a class="nav-link" href="#" th:href="@{/}">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item" th:classappend="${currentPage == 'yourspending'} ? 'active' : '' ">
-                <a class="nav-link" href="#" th:href="@{/yourspending}">Spending Patterns</a>
+            <li class="nav-item" th:classappend="${currentPage == 'spendingpatterns'} ? 'active' : '' ">
+                <a class="nav-link" href="#" th:href="@{/spendingpatterns}">Spending Patterns</a>
             </li>
             <li class="nav-item" th:classappend="${currentPage == 'settings'} ? 'active' : '' ">
                 <a class="nav-link" href="#" th:href="@{/settings}">Settings</a>
