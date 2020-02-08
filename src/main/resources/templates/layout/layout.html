@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <title>Privacy Champions</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="/webjars/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/common.css">
+    </head>
+    <body>
+        <div th:replace="fragments/header :: header(currentPage = ${currentPage})">...</div>
+        <main class="container" layout:fragment="main">
+        </main>
+
+        <script src="/webjars/jquery/3.0.0/jquery.min.js"></script>
+        <script src="/webjars/popper.js/1.14.3/popper.min.js"></script>
+        <script src="/webjars/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
