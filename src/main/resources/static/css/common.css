@@ -3,18 +3,18 @@ body {
 }
 
 
-.spendingBoxes a{
-    width:33%;
-    color:#212529;
-    -moz-transition: all .2s ease-in;
-    -o-transition: all .2s ease-in;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
-    padding-top:15px;
-}
+/*.spendingBoxes a{*/
+/*    width:33%;*/
+/*    color:#212529;*/
+/*    -moz-transition: all .2s ease-in;*/
+/*    -o-transition: all .2s ease-in;*/
+/*    -webkit-transition: all .2s ease-in;*/
+/*    transition: all .2s ease-in;*/
+/*    padding-top:15px;*/
+/*}*/
 
-.spendingBoxes a:hover{
-    text-decoration: none;
-    color:#212529;
-    background: #eee;
-}
+/*.spendingBoxes a:hover{*/
+/*    text-decoration: none;*/
+/*    color:#212529;*/
+/*    background: #eee;*/
+/*}*/

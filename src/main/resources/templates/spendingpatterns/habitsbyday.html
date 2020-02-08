@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout.html}" th:with="currentPage='habits'">
+<head>
+    <title>Spending Habits ~ Privacy Champions</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/webjars/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/common.css">
+
+</head>
+<body>
+<main class="container" layout:fragment="main">
+
+    <h2>Amount of spending by time of day</h2>
+<p>Below you can find your spending gauge which is a....</p>
+
+    DATEPICKER
+    <canvas style="display: block; height: 250px; width: 500px;" width="1000" height="500" id="graphchart" class="chartjs-render-monitor"></canvas>
+
+
+
+    <script>
+
+        var gchart = document.getElementById('graphchart');
+
+        var graphchart = new Chart(gchart, {
+            type: 'line',
+            data: {
+                labels: ['12am', '3am', '6am', '9am', '12pm', '3pm', '6pm', '9pm'],
+                datasets: [{
+                    label: 'Per day',
+                    data: [0, 0, 0, 20, 5, 10, 10, 40],
+                    fill: false,
+                    lineTension: 0.1,
+                    borderColor: [
+                        'rgba(215, 216, 217, 1)',
+                    ],
+                    borderWidth: 4
+                },
+                {
+                    label: 'Per week',
+                    data: [0, 0, 0, 10, 0, 10, 20, 20],
+                    fill: false,
+                    lineTension: 0.1,
+                    borderColor: [
+                        'rgba(163, 194, 207, 1)',
+                    ],
+                    borderWidth: 4
+                },
+                {
+                    label: 'Pay period',
+                    data: [0, 0, 0, 15, 0, 10, 15, 30],
+                    fill: false,
+                    lineTension: 0.1,
+                    borderColor: [
+                        'rgba(93, 188, 210, 1)',
+                    ],
+                    borderWidth: 4
+                },
+                ]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            fontSize: 16
+                        }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            fontSize: 16
+                        }
+                    }]
+                },
+                legend: {
+                    labels: {
+                       fontSize: 20
+                    }
+                }
+
+            }
+        });
+    </script>
+
+</main>
+</body>
+</html>

@@ -15,9 +15,14 @@ public class SpendingController {
         return "spendingPatterns";
     }
 
-
-    @GetMapping({"/habits/", "/habits"})
-    public String habits() {
-        return "spendingpatterns/habits";
+    @GetMapping({"/averagehealthyspending/", "/averagehealthyspending"})
+    public String averagehealthyspending() {
+        return "spendingpatterns/averagehealthyspending";
     }
+
+    @GetMapping({"/habitsbyday/", "/habitsbyday"})
+    public String habitsbyday() {
+        return "spendingpatterns/habitsbyday";
+    }
+
 }
