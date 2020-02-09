@@ -6,7 +6,8 @@
     <title>Spending Patterns ~ Privacy Champions</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="/webjars/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/css/common.css">
+
 </head>
 <body>
 <main class="container" layout:fragment="main">
@@ -46,7 +47,7 @@
                 <h4>Spending habits</h4>
                 <br />
                 <p>When, where, what of spending. </p>
-                <ul style="text-align:left;">
+                <ul style="text-align:left; padding-left:70px">
                     <li><a th:href="@{/spendingpatterns/habitsbyday}">Amount of spending by time of day</a></li>
                     <li><a th:href="@{/spendingpatterns/averagehealthyspending}">Type of spending compared to averages</a></li>
                 </ul>

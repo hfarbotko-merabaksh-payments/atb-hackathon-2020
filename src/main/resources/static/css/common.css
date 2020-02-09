@@ -2,6 +2,15 @@ body {
     padding-top: 5rem;
 }
 
+a{
+    color:#5ebcd1;
+}
+
+
+a:hover{
+    color: #3ab0d1;
+}
+
 
 /*.spendingBoxes a{*/
 /*    width:33%;*/
