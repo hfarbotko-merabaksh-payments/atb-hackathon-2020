@@ -13,7 +13,7 @@
 <main class="container" layout:fragment="main">
 
     <h2>Spending patterns</h2>
-<p>Below you can find your spending gauge which is a....</p>
+<p>The positive spending gauge gives you an overall picture of your financial health. It’s made up of three key influencers: Your budget, your spending habits and your financial assets. </p>
 <br />
 
     <h3>Positive spending gauge</h3>
@@ -24,7 +24,7 @@
 <br />
 <br />
 
-    <h3>Top 3 contributors</h3>
+    <h3>Key Influencers</h3>
 
     <div class="container" style="text-align:center;">
         <div class="row spendingBoxes" style="padding-top:40px;">
@@ -36,7 +36,12 @@
                 </svg>
                 <h4>Budget</h4>
                 <br />
-                <p>Your income versus how much you spend.</p>
+                <p>How much you make versus how much you spend.</p><p>Seeing where your money is going can help you stay on top of your finances. </p>
+                <ul style="text-align:left; padding-left:70px">
+                    <li><a th:href="@{/spendingpatterns/totalSpending}">Total Spending per Month</a></li>
+                    <li><a href="#">Budgeting best practices</a></li>
+                </ul>
+
             </div>
             <div class="col-sm">
                 <svg class="bi bi-watch" width="3em" height="3em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -46,19 +51,23 @@
                 </svg>
                 <h4>Spending habits</h4>
                 <br />
-                <p>When, where, what of spending. </p>
+                <p>When, where and how you spend your money.</p><p>You can learn a lot about your well-being by looking at your spending patterns.
+                </p>
                 <ul style="text-align:left; padding-left:70px">
                     <li><a th:href="@{/spendingpatterns/habitsbyday}">Amount of spending by time of day</a></li>
                     <li><a th:href="@{/spendingpatterns/averagehealthyspending}">Type of spending compared to averages</a></li>
-                    <li><a th:href="@{/spendingpatterns/totalSpending}">Total Spending per Month</a></li>
                 </ul>
             </div>
             <div class="col-sm">
                 <svg class="bi bi-diamond" width="3em" height="3em" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M5.1 2.7a.5.5 0 01.4-.2h9a.5.5 0 01.4.2l2.976 3.974c.149.185.156.45.01.644L10.4 17.3a.5.5 0 01-.8 0l-7.5-10a.5.5 0 010-.6l3-4zm11.386 3.785l-1.806-2.41-.776 2.413 2.582-.003zm-3.633.004l.961-2.989H6.186l.963 2.995 5.704-.006zM7.47 7.495l5.062-.005L10 15.366 7.47 7.495zm-1.371-.999l-.78-2.422-1.818 2.425 2.598-.003zM3.499 7.5l2.92-.003 2.193 6.82L3.5 7.5zm7.889 6.817l2.194-6.828 2.929-.003-5.123 6.831z" clip-rule="evenodd"></path>
                 </svg>
-                <h4>Investments</h4><br />
-                <p>Mutual funds, GIC’s, Registered Plans, Savings Accounts.</p>
+                <h4>Financial assets</h4><br />
+                <p>How you save your money.</p><p> Keeping your money in a variety of suitable financial products can give you peace of mind.</p>
+                <ul style="text-align:left; padding-left:70px">
+                    <li><a href="#">Amount of savings contributed</a></li>
+                    <li><a href="#">Your total assets</a></li>
+                </ul>
             </div>
         </div>
     </div>

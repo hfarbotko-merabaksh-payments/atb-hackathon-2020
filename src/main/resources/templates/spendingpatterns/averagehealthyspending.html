@@ -14,9 +14,13 @@
 <main class="container" layout:fragment="main">
 
     <h2>Your spending compared to average healthy spending per month</h2>
-<p>Below you can find your spending gauge which is a....</p>
+<p>Spending habits were chosen based on common patterns of spending which may lead to financial challenges. Your data is shown and supports are generated based on ways you can change your type of spending to improve your financial health.</p>
 
-    MONTH
+    <div class="form-group" style="width:20%; float: right;">
+        <input type="date" id="start" class="form-control" name="trip-start"
+               value="2020-02-01"
+               min="2019-01-01" max="2020-02-01">
+    </div>
     <canvas style="display: block; height: 250px; width: 500px;" width="1000" height="500" id="barchart" class="chartjs-render-monitor"></canvas>
 
 
