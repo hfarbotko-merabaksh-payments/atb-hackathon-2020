@@ -1,7 +1,6 @@
 package ca.atb.hackathon_2020.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import ca.atb.hackathon_2020.clientapi.ObpBankMetaApiClient;
 import lombok.Data;
 
 import java.util.List;
@@ -24,5 +23,5 @@ public class Bank {
 
     private List<Branch> branches;
 
-    private List<ObpBankMetaApiClient.ATMs> atms;
+    private List<ObpBankMetaApiModel.ATMs> atms;
 }

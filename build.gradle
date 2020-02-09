@@ -46,7 +46,8 @@ dependencies {
 
 	implementation('org.joda:joda-money:1.0.1')
 
-	implementation('org.springframework.cloud:spring-cloud-starter-openfeign:2.2.1.RELEASE')
+	implementation(group: 'org.apache.commons', name: 'commons-lang3', version: '3.9')
+
 }
 
 test {

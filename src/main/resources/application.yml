@@ -23,5 +23,9 @@ spring:
 
 obp:
   api:
-    rootUrl: https://api.leapos.ca/obp/v4.0.0
-    directLoginPath: https://api.leapos.ca/obp/v4.0.0/my/logins/direct
+    rootUrl: https://api.leapos.ca/
+    versionedUrl: https://api.leapos.ca/obp/v4.0.0/
+    directLoginPath: https://api.leapos.ca/my/logins/direct
+    user: 7e583941844b2e4ed0b83c6
+    password: 90134abb985252S+
+    consumerKey: aaeb34aec4fc4c81bc4b0a1482e217e2

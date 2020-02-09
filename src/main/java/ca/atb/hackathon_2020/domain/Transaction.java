@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.joda.money.Money;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -27,17 +28,17 @@ public class Transaction {
     private Metadata metadata;
 
     @Data
-    private class Details {
+    public static class Details {
         private String type;
         private String description;
 
         @JsonProperty("posted")
         @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = Hackathon2020Application.ISO8601_TIMESTAMP_FORMAT, timezone = "UTC")
-        private Date postedDate;
+        private LocalDateTime postedDate;
 
         @JsonProperty("completed")
         @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = Hackathon2020Application.ISO8601_TIMESTAMP_FORMAT, timezone = "UTC")
-        private Date completedDate;
+        private LocalDateTime completedDate;
 
         @JsonProperty("new_balance")
         @JsonDeserialize(using = MoneyJson.MoneyDeserializer.class)
@@ -49,7 +50,7 @@ public class Transaction {
     }
 
     @Data
-    public class Metadata {
+    public static class Metadata {
         private String narrative;
         private List<Object> comments;
         private List<Tag> tags;
