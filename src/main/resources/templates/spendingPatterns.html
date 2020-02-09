@@ -10,7 +10,8 @@
 
 </head>
 <body>
-<main class="container" layout:fragment="main">
+<main class="container" layout:fragment="main" th:with="items = ${ {'Home', 'Spending Patterns'} }">
+    <div th:replace="fragments/breadcrumb :: breadcrumb(items = ${items}, currentPage = 'Spending Patterns')">...</div>
 
     <h2>Spending patterns</h2>
 <p>The positive spending gauge gives you an overall picture of your financial health. It’s made up of three key influencers: Your budget, your spending habits and your financial assets. </p>

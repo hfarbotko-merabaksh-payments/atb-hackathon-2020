@@ -11,7 +11,8 @@
 
 </head>
 <body>
-<main class="container" layout:fragment="main">
+<main class="container" layout:fragment="main" th:with="items = ${ {'Home', 'Spending Patterns', 'Average Healthy Spending'} }">
+    <div th:replace="fragments/breadcrumb :: breadcrumb(items = ${items}, currentPage = 'Average Healthy Spending')">...</div>
 
     <h2>Your spending compared to average healthy spending per month</h2>
 <p>Spending habits were chosen based on common patterns of spending which may lead to financial challenges. Your data is shown and supports are generated based on ways you can change your type of spending to improve your financial health.</p>

@@ -10,7 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
 </head>
 <body>
-<main class="container" layout:fragment="main">
+<main class="container" layout:fragment="main" th:with="items = ${ {'Home', 'Settings'} }">
+    <div th:replace="fragments/breadcrumb :: breadcrumb(items = ${items}, currentPage = 'Settings')">...</div>
 
     <h2>Consent</h2>
     <br />

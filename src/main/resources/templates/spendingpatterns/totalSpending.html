@@ -11,7 +11,8 @@
 
 </head>
 <body>
-<main class="container" layout:fragment="main">
+<main class="container" layout:fragment="main" th:with="items = ${ {'Home', 'Spending Patterns', 'Total Spending'} }">
+    <div th:replace="fragments/breadcrumb :: breadcrumb(items = ${items}, currentPage = 'Total Spending')">...</div>
 
     <h2>Your spending for the month of February</h2>
     <p>Below you can find your spending gauge which is a....</p>

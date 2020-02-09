@@ -11,7 +11,8 @@
 
 </head>
 <body>
-<main class="container" layout:fragment="main">
+<main class="container" layout:fragment="main" th:with="items = ${ {'Home', 'Spending Patterns', 'Spending Habits By Day'} }">
+    <div th:replace="fragments/breadcrumb :: breadcrumb(items = ${items}, currentPage = 'Spending Habits By Day')">...</div>
 
     <h2>Amount of spending by time of day</h2>
 <p>Spending habits were chosen based on common times patterns which may lead to financial challenges. Your data is shown and supports are generated based on ways you can change the timing of your spending to improve your financial health. </p>

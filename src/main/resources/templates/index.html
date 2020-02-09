@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="/css/common.css">
 </head>
 <body>
-<main class="container" layout:fragment="main">
+<main class="container" layout:fragment="main" th:with="items = ${ {'Home'} }">
+    <div th:replace="fragments/breadcrumb :: breadcrumb(items = ${items}, currentPage = 'Home')">...</div>
 
     <div class="container">
         <div class="row " style="padding-top:40px;">

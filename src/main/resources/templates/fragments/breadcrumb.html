@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spending Habits ~ Privacy Champions</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/webjars/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/common.css">
+
+
+</head>
+<body>
+<nav aria-label="breadcrumb" th:fragment="breadcrumb(items, currentPage)">
+    <ol class="breadcrumb">
+        <li th:each="item : ${items}" class="breadcrumb-item" th:classappend="${item == currentPage}? 'active'">
+            <a href="#" th:text="${item}" th:if="${item != currentPage}">Item</a>
+            <span th:text="${item}" th:if="${item == currentPage}">Item</span>
+        </li>
+    </ol>
+</nav>
+</body>
+</html>
