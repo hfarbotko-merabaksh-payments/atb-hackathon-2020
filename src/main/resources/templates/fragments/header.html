@@ -9,19 +9,33 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item" th:classappend="${currentPage == 'Home'} ? 'active' : '' ">
-                <a class="nav-link" href="#" th:href="@{/}">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item" th:classappend="${currentPage == 'spendingpatterns'} ? 'active' : '' ">
-                <a class="nav-link" href="#" th:href="@{/spendingpatterns}">Spending Patterns</a>
-            </li>
-            <li class="nav-item" th:classappend="${currentPage == 'settings'} ? 'active' : '' ">
-                <a class="nav-link" href="#" th:href="@{/settings}">Settings</a>
-            </li>
-        </ul>
-    </div>
+<!--    <div class="collapse navbar-collapse navbar-right" id="navbarsExampleDefault">-->
+<!--        <ul class="navbar-nav mr-auto">-->
+<!--            <li class="nav-item" th:classappend="${currentPage == 'Home'} ? 'active' : '' ">-->
+<!--                <a class="nav-link" href="#" th:href="@{/}">Home <span class="sr-only">(current)</span></a>-->
+<!--            </li>-->
+<!--            <li class="nav-item" th:classappend="${currentPage == 'spendingpatterns'} ? 'active' : '' ">-->
+<!--                <a class="nav-link" href="#" th:href="@{/spendingpatterns}">Spending Patterns</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item" th:classappend="${currentPage == 'settings'} ? 'active' : '' ">-->
+<!--                <a class="nav-link" href="#" th:href="@{/settings}">Settings</a>-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
+
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item" th:classappend="${currentPage == 'Home'} ? 'active' : '' ">
+                    <a class="nav-link" href="#" th:href="@{/}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item" th:classappend="${currentPage == 'spendingpatterns'} ? 'active' : '' ">
+                    <a class="nav-link" href="#" th:href="@{/spendingpatterns}">Spending Patterns</a>
+                </li>
+                <li class="nav-item" th:classappend="${currentPage == 'settings'} ? 'active' : '' ">
+                    <a class="nav-link" href="#" th:href="@{/settings}">Settings</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
 
