@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="/webjars/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/common.css">
-
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
 </head>
 <body>
 <main class="container" layout:fragment="main">
@@ -114,9 +114,63 @@
         </tr>
         </tbody>
     </table>
+    <hr />
 
 
 
+    <div class="container">
+        <div class="row ">
+            <div class="col-sm-3">
+                <div class="custom-control custom-checkbox checkbox-lg" style="float:left;">
+                    <input type="checkbox" class="custom-control-input" id="checkbox-222" checked="" >
+                    <label class="custom-control-label" for="checkbox-222">I consent to the above:</label>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <canvas style=" border:1px solid black;" width="300" height="150" id="canvas" class="canvas"></canvas>
+                <button type="button" class="btn btn-primary clearButton btn-sm" id="clearButton" style="margin-top:-22px;">Clear</button>
+            </div>
+    </div>
+
+
+
+
+    <script>
+
+        clearButton.addEventListener("click", function (event) {
+            signaturePad.clear();
+            return false;
+        });
+
+        var canvas = document.querySelector("canvas");
+
+        var signaturePad = new SignaturePad(canvas);
+
+        // Returns signature image as data URL (see https://mdn.io/todataurl for the list of possible parameters)
+        signaturePad.toDataURL(); // save image as PNG
+        signaturePad.toDataURL("image/jpeg"); // save image as JPEG
+        signaturePad.toDataURL("image/svg+xml"); // save image as SVG
+
+
+
+        // Returns signature image as an array of point groups
+        const data = signaturePad.toData();
+
+        // Draws signature image from an array of point groups
+        signaturePad.fromData(data);
+
+        // Clears the canvas
+        signaturePad.clear();
+
+        // Returns true if canvas is empty, otherwise returns false
+        signaturePad.isEmpty();
+
+        // Unbinds all event handlers
+        signaturePad.off();
+
+        // Rebinds all event handlers
+        signaturePad.on();
+    </script>
 </main>
 </body>
 </html>
