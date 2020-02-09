@@ -28,7 +28,7 @@ public class TransactionClient {
 
         authHeader.add("from_date", startTime.format(DateTimeFormatter.ISO_DATE_TIME));
         authHeader.add( "to_date", endTime.format(DateTimeFormatter.ISO_DATE_TIME));
-        authHeader.add("limit", "50");
+        authHeader.add("limit", "100");
 
         Transactions transactions = restClient
                 .get(transactionClient, pathVariable, authHeader, null, Transactions.class)
