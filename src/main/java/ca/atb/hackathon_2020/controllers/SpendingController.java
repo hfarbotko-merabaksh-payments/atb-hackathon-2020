@@ -36,12 +36,12 @@ public class SpendingController {
 
         transactionsForDateRange
                 .forEach(t -> {
-                    if (transactionByType.containsKey(t.getDetails().getType())) {
-                        transactionByType.get(t.getDetails().getType()).add(SimplifiedTransaction.of(t));
+                    if (transactionByType.containsKey(t.getDetails().getType().toUpperCase())) {
+                        transactionByType.get(t.getDetails().getType().toUpperCase()).add(SimplifiedTransaction.of(t));
                     } else {
                         List<SimplifiedTransaction> list = new ArrayList<>();
                         list.add(SimplifiedTransaction.of(t));
-                        transactionByType.put(t.getDetails().getType(), list);
+                        transactionByType.put(t.getDetails().getType().toUpperCase(), list);
                     }
                 });
 
