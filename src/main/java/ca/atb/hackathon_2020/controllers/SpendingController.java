@@ -74,7 +74,7 @@ public class SpendingController {
         List<Double> values = new ArrayList<>();
 
         countByType.forEach((k, v) -> {
-            headers.add(k);
+            headers.add(k.toUpperCase().replaceAll("_", " "));
             values.add(v.doubleValue());
         });
 
